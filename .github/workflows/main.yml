@@ -20,7 +20,6 @@ on:
         - dev
         - qa
 env:
-  DAY_OF_WEEK: Monday
   envt: ${{ github.event.inputs.name }}
 
 
@@ -57,15 +56,3 @@ jobs:
         with:
            name: my-artifact
            path: a.txt
-  
-  greeting_job:
-    runs-on: ubuntu-latest
-
-    env:
-      Greeting: Hello
-    steps:
-      - name: "Say Hello Mona it's Monday"
-        run: echo " ${{ github.event.inputs.name }}"
-
-        env:
-          First_Name: Mona
