@@ -46,8 +46,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          env >> a.txt
-          cat a.txt
+          echo "$someval"
   
   greeting_job:
     runs-on: ubuntu-latest
