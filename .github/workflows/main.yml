@@ -19,9 +19,6 @@ on:
         options: 
         - dev
         - qa
-      environment:
-        description: 'Environment to run tests against'
-        type: environment
  
 env:
   DAY_OF_WEEK: Monda
