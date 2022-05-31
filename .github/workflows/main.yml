@@ -44,7 +44,8 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          env
+          env >> a.txt
+          vi a.txt
   
   greeting_job:
     runs-on: ubuntu-latest
