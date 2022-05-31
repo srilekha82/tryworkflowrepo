@@ -15,18 +15,11 @@ on:
      inputs:
       name:
         type: choice
-        description: Who to greet
+        description: Which Environment
         options: 
-        - monalisa
-        - cschleiden
-      message:
-        required: true
-      use-emoji:
-        type: boolean
-        description: Include  emojis
-      environment:
-        type: environment
-
+        - dev
+        - qa
+ 
 env:
   DAY_OF_WEEK: Monda
 
@@ -60,7 +53,7 @@ jobs:
       Greeting: Hello
     steps:
       - name: "Say Hello Mona it's Monday"
-        run: echo "${{ github.event.inputs.message }} ${{ fromJSON('["", ""]')[github.event.inputs.use-emoji == 'true'] }} ${{ github.event.inputs.name }}"
+        run: echo " ${{ github.event.inputs.name }}"
 
         env:
           First_Name: Mona
