@@ -21,7 +21,7 @@ on:
         - qa
 env:
   DAY_OF_WEEK: Monday
-  rg: ${{ github.event.inputs.name }}
+  envt: ${{ github.event.inputs.name }}
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -38,7 +38,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!${{ env.DAY_OF_WEEK }} ${{ env.rg }}
+        run: echo Hello, world!${{ env.DAY_OF_WEEK }} ${{ env.envt }} ${{ env.SUBSCRIPTIONNAME }}
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
