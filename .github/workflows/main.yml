@@ -47,7 +47,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo "$someval"
-          $someval >> a.txt
+          echo  $someval >> a.txt
           cat a.txt
       - name: output a file
         run: |
